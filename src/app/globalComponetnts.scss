@@ -1,0 +1,129 @@
+
+a{
+  text-decoration: none;
+}
+
+main{
+  transition: 0.3s;
+  transition-delay: 0.3s;
+}
+.container {
+  max-width: 1820px;
+}
+
+
+.btn-while {
+  display: flex;
+  padding: 11.34px 12px 11.34px 23.57px;
+  align-items: center;
+  gap: 13px;
+  border-radius: 89.606px;
+  background: #fff;
+  color: #64AC37;
+  font-size: 16.34px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.654px;
+
+  &:hover {
+    background: #FFF;
+    color: #68b738;
+  }
+
+  span {
+    width: 31.362px;
+    height: 31.362px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #68b738;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 13px;
+  }
+}
+
+.btn-green {
+  display: flex;
+  padding: 11.34px 12px 11.34px 23.57px;
+  align-items: center;
+  gap: 13px;
+  border-radius: 89.606px;
+  background: #64AC37;
+  color: #FFF;
+  font-size: 16.34px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.654px;
+
+  &:hover {
+    background: #68b738;
+    color: #FFF;
+  }
+
+  span {
+    width: 31.362px;
+    height: 31.362px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 50%;
+    color: #121212;
+    font-size: 13px;
+  }
+}
+
+
+.btn-status {
+  display: flex;
+  padding: 6px 13px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(85, 143, 33, 0.05);
+  background: rgba(126, 187, 72, 0.15);
+  color: #558F21;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: not-allowed;
+
+  &:hover {
+    border: 1px solid rgba(85, 143, 33, 0.05);
+    background: rgba(126, 187, 72, 0.15);
+    color: #558F21;
+  }
+}
+
+.btn-status-outline{
+  display: flex;
+  padding: 6px 13px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  border: 0;
+  background: transparent;
+  font-weight: 700;
+  cursor: not-allowed;
+  color: #545454;
+  font-size: 20px;
+  font-style: normal;
+  line-height: 140%;
+  letter-spacing: -0.8px;
+  text-transform: uppercase;
+
+  &:hover {
+    border: 0;
+    background: transparent;
+    color: #545454;
+  }
+}
+
+
+button{
+  border: 0
+}

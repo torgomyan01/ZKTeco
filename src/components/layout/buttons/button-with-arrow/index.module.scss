@@ -1,0 +1,48 @@
+.buttonWithArrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 11px 17px 11px 24px;
+  gap: 0 14px;
+  border-radius: 90px;
+  color: $c-white;
+	font-size: 16px;
+  font-weight: 700;
+  .buttonTextWrapper {
+    overflow: hidden;
+
+    .buttonText {
+      display: inline-block;
+      width: max-content;
+      text-align: center;
+    }
+  }
+
+  .arrowWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+  }
+}
+
+.buttonWithArrow.green {
+  background-color: $c-green-primary;
+  color: $c-white;
+
+  .arrowWrapper {
+    background-color: $c-white;
+  }
+}
+
+.buttonWithArrow.white {
+  background-color: $c-white;
+  color: $c-green-primary;
+
+  .arrowWrapper {
+    background-color: $c-green-primary;
+  }
+}

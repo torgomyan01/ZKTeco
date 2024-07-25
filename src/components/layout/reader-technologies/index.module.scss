@@ -1,0 +1,41 @@
+.readerTechnologies {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+	justify-content: center;
+  gap: 15px;
+  padding: 20px 0 50px;
+
+  .readerTechnologiesIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.19);
+    backdrop-filter: blur(28.600000381469727px);
+		overflow: hidden;
+  }
+}
+
+@media screen and (max-width: $s-tablet) {
+  .readerTechnologies {
+    gap: 10px;
+    padding: 10px 0 50px;
+    order: -1;
+  }
+}
+
+@media screen and (max-width: $s-mobile) {
+  .readerTechnologies {
+    gap: get-m(10px);
+
+    .readerTechnologiesIcon {
+      width: get-m(39px);
+      height: get-m(39px);
+      border-radius: get-m(7px);
+    }
+  }
+}

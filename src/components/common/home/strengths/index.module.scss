@@ -1,0 +1,173 @@
+.strengthsWrapper {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  width: 100%;
+  padding: 70px 30px;
+
+  .strengthsContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1492px;
+    gap: 130px 0;
+    flex-shrink: 0;
+		.label {
+			position: sticky;
+			// z-index: 1000;
+			top: 200px;
+		}
+    .strengthsProgressBar {
+      position: sticky;
+      top: 70px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      width: 100%;
+      min-height: 81px;
+      border: 1px solid #E5E5E5;
+      overflow: hidden; // чтобы progress не выходил за границы
+
+      .strengthsProgress {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+				z-index: -20;
+        background: #DAEBF4CC; // зеленый цвет для индикатора прогресса
+      }
+
+      .strengthsProgressBarItem {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 11px;
+        padding: 12px 14px;
+
+        .index {
+          display: flex;
+          width: 22px;
+          height: 22px;
+          padding: 3px 5px 5px 5px;
+          justify-content: center;
+          align-items: center;
+          border-radius: 5px;
+          background-color: #979CB5;
+          color: white;
+          font-size: 12px;
+        }
+
+        .title {
+          color: #979CB5;
+          font-size: 18px;
+        }
+				.active {
+					color: #DAEBF4CC !important;
+				}
+				
+      }
+		
+      .borderRight {
+        border-right: 1px solid #E5E5E5;
+      }
+    }
+
+    .strengthsBoardsContainer {
+      position: sticky;
+      top: 281px;
+    }
+  }
+}
+
+@media screen and (max-width: $s-desktop) {
+  .strengthsWrapper {
+    padding: get-d(70px) 30px;
+
+    .strengthsContainer {
+      gap: get-d(130px) 0;
+
+      .strengthsProgressBar {
+        min-height: get-d(81px);
+  
+        .strengthsProgressBarItem {
+          gap: get-d(11px);
+
+          .title {
+            font-size: get-d(18px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $s-laptop) {
+  .strengthsWrapper {
+    padding: get-ds(70px) 30px;
+
+    .strengthsContainer {
+      gap: get-ds(130px) 0;
+
+      .strengthsProgressBar {
+        min-height: get-ds(81px);
+  
+        .strengthsProgressBarItem {
+          gap: get-ds(11px);
+
+          .title {
+            font-size: get-ds(18px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $s-tablet) {
+  .strengthsWrapper {
+    padding: get-tl(70px) 30px;
+
+    .strengthsContainer {
+      gap: get-tl(82px) 0;
+
+      .strengthsProgressBar {
+        min-height: 57px;
+  
+        .strengthsProgressBarItem {
+          gap: 9px;
+
+          .title {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $s-mobile) {
+  .strengthsWrapper {
+    padding: 0 20px;
+
+    .strengthsContainer {
+      gap: 41px 0;
+
+      .strengthsProgressBar {
+        grid-template-columns: 1fr 22% 22%;
+  
+        .strengthsProgressBarItem {
+          .title {
+            display: none;
+          }
+        }
+
+        .strengthsProgressBarItem.active {
+          .title {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

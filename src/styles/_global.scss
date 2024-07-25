@@ -1,0 +1,117 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto-Black.ttf") format("truetype");
+  font-weight: 900; /* black */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto-BlackItalic.ttf") format("truetype");
+  font-weight: 900; /* black */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: 700; /* bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto-BoldItalic.ttf") format("truetype");
+  font-weight: 700; /* bold */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto-Italic.ttf") format("truetype");
+  font-weight: 400; /* regular */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto-Light.ttf") format("truetype");
+  font-weight: 300; /* light */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto-LightItalic.ttf") format("truetype");
+  font-weight: 300; /* light */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto-Medium.ttf") format("truetype");
+  font-weight: 500; /* medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto-MediumItalic.ttf") format("truetype");
+  font-weight: 500; /* medium */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400; /* regular */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto-Thin.ttf") format("truetype");
+  font-weight: 100; /* thin */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto-ThinItalic.ttf") format("truetype");
+  font-weight: 100; /* thin */
+  font-style: italic;
+}
+html {
+  width: 100%;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    width: get-d(5px);
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $c-light-grey;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $c-dark-green;
+    border-radius: 10px;
+    border: 0px dotted $c-white;
+  }
+}
+
+body {
+  background-color: $c-bg;
+  color: $c-black-primary;
+	overflow-x: hidden;
+}
+
+#app {
+  //position: relative;
+  //width: 100%;
+  //max-width: 1920px;
+}
+
+button {
+  cursor: pointer;
+}

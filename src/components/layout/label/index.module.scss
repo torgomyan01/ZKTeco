@@ -1,0 +1,45 @@
+.labelWrapper {
+  width: max-content;
+  border-radius: 10px;
+  overflow: hidden;
+  text-transform: uppercase;
+  .label {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 13px 8px;
+    border: 1px solid rgba(85, 143, 33, 0.05);
+    border-image: linear-gradient(
+        to left,
+        rgba(85, 143, 33, 0.05),
+        rgba(85, 143, 33, 0.3),
+        rgba(85, 143, 33, 0.05)
+      )
+      1;
+    border-radius: 10px;
+    font-size: clamp(14px, 3vw, 26.43px);
+  }
+
+  .label.green {
+    background: rgba(126, 187, 72, 0.15);
+    color: $c-dark-green;
+  }
+
+  .label.gray {
+    background: rgba(255, 255, 255, 0.15);
+    color: #dedede;
+  }
+  .label.white {
+    color: #dedede !important;
+  }
+  .transparent {
+    background: transparent !important;
+    border: none;
+    color: #545454 !important;
+    font-weight: bold;
+    border-image: none;
+    padding-left: 0;
+  }
+}

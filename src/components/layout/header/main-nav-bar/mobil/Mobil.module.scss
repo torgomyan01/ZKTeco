@@ -1,0 +1,80 @@
+.mobil {
+  font-family: "AcidGrotesk";
+  .menuButton {
+    cursor: pointer;
+  }
+  .dropDown {
+    top: 0px;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.54);
+    height: 100vh;
+    .content {
+      z-index: 10;
+      background-color: #fff;
+      width: 100%;
+      box-sizing: border-box;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      .items {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+        padding: 120px 45px 30px 45px;
+        .link {
+          width: 100%;
+          color: rgb(18, 18, 18);
+          display: flex;
+          justify-content: space-between;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 18px;
+          letter-spacing: -0.5%;
+          cursor: pointer;
+        }
+				.links {
+					display: flex;
+					flex-direction: column;
+					gap: 20px;
+				}
+				.dropDownLink {
+					cursor: pointer;
+					display: flex;
+					align-items: center;
+					gap: 10px;
+					div {
+						display: flex;
+						flex-direction: column;
+						gap: 5px;
+						justify-content: space-between;
+					}
+					h3 {
+						color: rgb(18, 18, 18);
+						font-family: "Roboto";
+						font-size: 16px;
+						margin: 0;
+						font-weight: 700;
+						line-height: 19px;
+						letter-spacing: -0.5%;
+					}
+					p {
+						margin: 0;
+						color: rgb(18, 18, 18);
+						opacity: 0.4;
+						font-size: 14px;
+						font-weight: 400;
+						line-height: 16.8px;
+						letter-spacing: -0.5%;
+						text-align: left;
+					}
+				}
+      }
+    }
+    .out {
+      height: 120%;
+    }
+  }
+}

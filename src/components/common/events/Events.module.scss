@@ -1,0 +1,74 @@
+.wrapper {
+  font-family: "AcidGrotesk";
+  padding: 129px 30px 150px;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  .content {
+    width: 90vw;
+    max-width: 1600px;
+		.heading {
+			width: 100%;
+			text-align: center;
+			font-weight: 300;
+			font-size: clamp(29px, 5vw, 70px);
+			margin-bottom: clamp(40px, 4vw, 80px);
+			@media (max-width: 1000px) {
+				text-align: left;
+				// margin-bottom: 40px;
+			}
+		}
+    .items {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      .item {
+        padding: 8px;
+        min-height: 461px;
+        width: calc(100% / 4 - 20px);
+        border: 2px solid #e3e3e3;
+        border-radius: 20px;
+        @media (min-width: 1001px) and (max-width: 1400px) {
+          width: calc(100% / 3 - 20px);
+        }
+        @media (min-width: 601px) and (max-width: 1000px) {
+          width: calc(100% / 2 - 20px);
+        }
+        @media (max-width: 600px) {
+          width: 100%;
+        }
+        img {
+          width: 100%;
+        }
+        .bottom {
+          padding: 20px 17px 17px 17px;
+          .date {
+            color: #121212;
+            opacity: 0.7;
+            font-size: 14px;
+            font-weight: 400;
+            padding-bottom: 14px;
+          }
+          .title {
+            color: #50565f;
+            font-size: 22px;
+            padding-bottom: 13px;
+          }
+          .text {
+            opacity: 0.6;
+            color: #50565f;
+            font-size: 16px;
+          }
+          button {
+            margin-top: 30px;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #efefef;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}

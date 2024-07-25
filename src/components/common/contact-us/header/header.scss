@@ -1,0 +1,208 @@
+.contact-us {
+  padding-top: 12.5rem;
+
+  @media (max-width: 991px){
+    padding-top: 8.5rem;
+  }
+
+  &-title {
+    width: 100%;
+    max-width: 62.25rem;
+    color: #121212;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 104.8%;
+    letter-spacing: -1.02px;
+    text-align: center;
+    font-size: 4.25rem;
+    margin: 1.875rem auto 10rem;
+
+    @media (max-width: 991px){
+      font-size: 3.25rem;
+      margin-bottom: 8rem;
+    }
+    @media (max-width: 768px){
+      font-size: 2.25rem;
+      margin-bottom: 5rem;
+    }
+  }
+
+  &-customer {
+    color: #262D35;
+    font-size: 1.625rem;
+    font-style: italic;
+    font-weight: 900;
+    line-height: 19.5px;
+    margin-top: 3.125rem;
+    margin-bottom: 1.875rem;
+
+    &-type {
+      display: flex;
+      height: 3.625rem;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5.600375rem;
+      border: 1px solid #E9EAEA;
+      background: #FFF;
+      padding: 0 1.875rem;
+      color: #121212;
+      font-size: 1.125rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-right: 0.9375rem;
+      margin-bottom: 0.9375rem;
+
+      &.active {
+        background-color: #7EBB48;
+        color: #fff;
+      }
+
+    }
+  }
+
+  &-info{
+    padding-bottom: 3.125rem;
+    border-bottom: 2px solid rgba(38, 45, 53, 0.10);
+    margin-bottom: 3.125rem;
+
+    @media (max-width: 991px){
+      padding-bottom: 2.125rem;
+      margin-bottom: 2.125rem;
+    }
+
+    &:last-child{
+      border: 0;
+    }
+    &-header{
+      width: 3.125rem;
+      height: 3.125rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1.875rem;
+      color: #121212;
+      font-size: 1.25rem;
+      font-weight: 500;
+      line-height: 104.8%;
+      letter-spacing: -0.3px;
+      background: url("../../../../../public/images/contact-us-info-header.svg") no-repeat center;
+      background-size: contain;
+    }
+    &-title{
+      color: #121212;
+      font-size: 2.25rem;
+      font-weight: 500;
+      line-height: 104.8%;
+      letter-spacing: -0.54px;
+      margin-bottom: 1.875rem;
+      @media (max-width: 991px){
+        font-size: 1.8rem;
+        margin-bottom: 0.8rem;
+      }
+    }
+    &-description{
+      color: rgba(0, 0, 0, 0.80);
+      font-size: 1.25rem;
+      font-weight: 400;
+      line-height: normal;
+      margin-bottom: 2.1875rem;
+      @media (max-width: 991px){
+        font-size: 1rem;
+        margin-bottom: 1.8rem;
+      }
+    }
+    &-emailContact{
+      color: #171717;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: normal;
+      svg{
+        margin-right: 10px;
+        transform: translateY(-5px);
+      }
+    }
+  }
+}
+
+.privacy-police {
+  width: 100%;
+  max-width: 728px;
+  color: rgba(38, 45, 53, 0.28);
+  font-size: 1.625rem;
+  font-weight: 400;
+  line-height: 2.125rem;
+  margin-top: 3.75rem;
+  @media (max-width: 991px){
+    font-size: 1.125rem;
+    line-height: unset;
+  }
+  a {
+    text-decoration-line: underline;
+    color: #7EBB48;
+  }
+}
+
+.def-input {
+  width: 100%;
+  position: relative;
+  height: 3.75rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  @media (max-width: 991px){
+    height: 3rem;
+  }
+
+  &.required {
+    &:after {
+      content: "*";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      color: red;
+      margin-top: 5px;
+      font-size: 1.625rem;
+    }
+  }
+
+  input {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-bottom: 2px solid rgba(38, 45, 53, 0.10);
+    transition: 0.3s;
+    color: #262D35;
+    font-size: 1.625rem;
+    font-weight: 400;
+    line-height: 19.5px;
+
+    @media (max-width: 991px){
+      font-size: 1.3rem;
+    }
+
+    &:active, &:focus {
+      border: 0;
+      border-bottom: 2px solid #7EBB48;
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: rgba(38, 45, 53, 0.50);
+      font-size: 1.625rem;
+      font-weight: 400;
+      line-height: 19.5px;
+      @media (max-width: 991px){
+        font-size: 1.3rem;
+      }
+    }
+
+
+  }
+}
+
+

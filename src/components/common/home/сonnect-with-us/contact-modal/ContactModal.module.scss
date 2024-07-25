@@ -1,0 +1,150 @@
+.contactModal {
+	position: relative;
+  font-family: "AcidGrotesk";
+  background-color: #fff;
+  border-radius: 20px;
+  width: 90vw;
+  max-width: 756px;
+  height: 933px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  padding: 40px;
+	z-index: 1000000000 !important;
+  @media (max-width: 600px) {
+    padding: 30px;
+  }
+  h2 {
+    font-size: clamp(20px, 2vw, 32px);
+  }
+	.close {
+		position: absolute;
+		top: 16px;
+		right: 16px;
+		cursor: pointer;
+	}
+  .form {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    @media (max-width: 600px) {
+      margin-top: 30px;
+    }
+    .inputGroup {
+      position: relative;
+      max-width: 935px;
+      height: 100px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+			@media (max-width: 600px) {
+				height: 69px;
+			}
+      .label {
+        position: absolute;
+        top: 0;
+				@media (max-width: 600px) {
+					top: -10px;
+				}
+        width: 100%;
+        font-size: clamp(12px, 1vw, 14px);
+        font-weight: 400;
+        display: flex;
+        justify-content: space-between;
+        p {
+          color: #000;
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+        span {
+          color: red;
+        }
+      }
+      .input {
+        width: 100%;
+        padding-bottom: 15px;
+        font-size: 16px;
+        font-weight: 400;
+        color: #262d35;
+        border-bottom: 2px solid #262d351a;
+        transition: border-color 0.3s ease-in-out;
+      }
+
+      .input::placeholder {
+        color: #262d3580;
+      }
+      .input:focus {
+        border-color: $c-green-primary;
+      }
+    }
+    .miniInput {
+      width: 47%;
+      @media (max-width: 1000px) {
+        width: 100%;
+      }
+    }
+  }
+  .customer {
+    margin-top: 30px;
+    @media (max-width: 600px) {
+      margin-top: 10px;
+    }
+    width: 100%;
+    header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      h4 {
+        font-size: clamp(12px, 1vw, 14px);
+        text-transform: uppercase;
+      }
+      p {
+        color: red;
+      }
+    }
+    .items {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      button {
+        padding: 14px 21px;
+        background-color: #fff;
+        border: 2px solid #e9eaea;
+        border-radius: 89.61px;
+        color: #000;
+        font-size: clamp(14px, 2vw, 16px);
+        font-weight: 500;
+        transition: background-color 0.3s ease-in-out;
+				@media (max-width: 600px) {
+					padding: 9px 17px;
+				}
+      }
+      .active {
+        border-color: transparent;
+        background-color: #000000;
+        color: #fff;
+      }
+    }
+  }
+  .contactButton {
+    margin-top: 40px;
+  }
+  .politic {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 30px;
+    font-size: 14px;
+    line-height: 16.41px;
+    font-weight: 300;
+    span {
+      color: $c-green-primary;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}

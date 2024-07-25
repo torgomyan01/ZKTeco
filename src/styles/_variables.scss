@@ -1,0 +1,53 @@
+// colors
+$c-bg: #ffffff;
+$c-white: #ffffff;
+$c-smoke-white: #fafffc;
+$c-black: #000000;
+$c-black-primary: #121212;
+$c-black-secondary: #252934;
+$c-light-black: #494c50;
+$c-green-primary: #7ebb48;
+$c-fog-green-primary: #7ebb4870;
+$c-smoke-green-primary: #7ebb4815;
+$c-dark-green: #558f21;
+$c-light-green: #78be43;
+$c-grey: #b5b4bf;
+$c-grey-secondary: #b5b4bf;
+$c-light-grey: #ebebeb;
+
+// screens
+$s-desktop: 1600px;
+$s-laptop: 1440px;
+$s-tablet: 1024px;
+$s-mobile: 565px;
+
+@function get-dl($target) {
+  $vw-context: calc((1920 * 0.01) * 1px);
+  @return calc(($target / $vw-context) * 1vw);
+}
+
+@function get-d($target) {
+  $vw-context: calc((1600 * 0.01) * 1px);
+  @return calc(($target / $vw-context) * 1vw);
+}
+
+@function get-ds($target) {
+  $vw-context: calc((1440 * 0.01) * 1px);
+  @return calc(($target / $vw-context) * 1vw);
+}
+
+@function get-tl($target) {
+  $vw-context: calc((1024 * 0.01) * 1px);
+  @return calc(($target / $vw-context) * 1vw);
+}
+
+@function get-t($target) {
+  $vw-context: calc((768 * 0.01) * 1px);
+  @return calc(($target / $vw-context) * 1vw);
+}
+
+@function get-m($target) {
+  $vw-context: calc((430 * 0.01) * 1px);
+  @return calc(($target / $vw-context) * 1vw);
+}
+

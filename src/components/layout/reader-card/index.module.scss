@@ -1,0 +1,246 @@
+.readerCard {
+	opacity: 1 !important;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 581px;
+  height: 257.35px;
+  padding: 25px 25px 25px 35px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.308);
+  backdrop-filter: blur(101.75px);
+  .heading {
+    margin: 15px 0px 13px 0px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    h3 {
+      margin-left: 80px;
+    }
+  }
+  .bottom {
+    position: relative;
+    z-index: 10000;
+    display: flex;
+    align-items: flex-end;
+		justify-content: space-between;
+  }
+  .readerCardHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .readerCardHeaderTitle {
+      color: $c-white;
+      font-size: 16px;
+      font-weight: 400;
+      opacity: 0.6;
+    }
+
+    .readerCardHeaderButton {
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+    }
+  }
+
+  .readerCardTitle {
+    color: $c-white;
+    font-size: 27px;
+    font-weight: 400;
+    line-height: 108%; /* 29.16px */
+  }
+
+  .readerCardDescription {
+    width: 100%;
+    max-width: 380px; /* must be - 310px */
+    padding-top: 18px;
+    color: $c-white;
+    // font-size: clamp(5px, 1vw,  16px);
+		font-size: 16px;
+    line-height: 120%; /* 19.2px */
+    opacity: 0.8;
+  }
+
+  .readerCardIconWrapper {
+    position: absolute;
+    left: -20px;
+    // left: 10px;
+    // bottom: 10px;
+    width: 100px;
+    height: 100px;
+
+    .readerCardBorderIcon {
+      top: 2px;
+      left: 0px;
+      position: relative;
+    }
+    .raz {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      max-height: 70px;
+      max-width: 70px;
+			height: 80px;
+      width: 80px;
+      display: inline-block;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      border: 7px solid #bababa;
+      background-color: transparent;
+      z-index: 100000000000;
+    }
+    .readerCardIcon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+			max-height: 80px;
+      max-width: 80px;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+@media screen and (max-width: $s-mobile) {
+  .readerCard {
+    padding: 25px;
+
+    .readerCardHeader {
+      .readerCardHeaderTitle {
+        font-size: 14px;
+      }
+    }
+
+    .readerCardTitle {
+      font-size: 22px;
+    }
+
+    .readerCardDescription {
+      font-size: 14px;
+    }
+
+    .readerCardIconWrapper {
+      left: 0px;
+    }
+  }
+}
+.sliderPagination {
+	position: absolute;
+	bottom: 10px;
+	right: 10%;
+	transform: translate(50%, 100%);
+	display: flex;
+	flex-direction: row;
+	gap: 6px;
+	z-index: 10;
+
+	:global(.swiper-pagination-bullet) {
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		background-color: $c-white;
+		opacity: 0.2;
+		cursor: pointer;
+	}
+
+	:global(.swiper-pagination-bullet-active) {
+		opacity: 1;
+	}
+}
+
+// .readerCard {
+//   position: relative;
+//   display: flex;
+//   flex-direction: column;
+//   width: 100%;
+//   max-width: 517px;
+//   height: 391px;
+//   padding: 25px 25px 25px 35px;
+//   flex-shrink: 0;
+//   border-radius: 16px;
+//   background: rgba(255, 255, 255, 0.09);
+//   backdrop-filter: blur(101.75px);
+
+//   .readerCardHeader {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+//     align-items: center;
+//     width: 100%;
+
+//     .readerCardHeaderTitle {
+//       color: $c-white;
+//       font-size: 16px;
+//       font-weight: 400;
+//       opacity: 0.6;
+//     }
+
+//     .readerCardHeaderButton {
+//       width: 40px;
+//       height: 40px;
+//       flex-shrink: 0;
+//     }
+//   }
+
+//   .readerCardTitle {
+//     color: $c-white;
+//     font-size: 27px;
+//     font-weight: 400;
+//     line-height: 108%; /* 29.16px */
+//   }
+
+//   .readerCardDescription {
+//     width: 100%;
+//     max-width: 320px; /* must be - 310px */
+//     padding-top: 18px;
+//     color: $c-white;
+//     font-size: 16px;
+//     line-height: 120%; /* 19.2px */
+//     opacity: 0.8;
+//   }
+
+//   .readerCardIconWrapper {
+//     position: absolute;
+//     left: 10px;
+//     bottom: 10px;
+//     width: 120px;
+//     height: 120px;
+//     margin: 25px;
+//     border: 15px solid rgba(255, 255, 255, 0.15);
+//     border-right-color: transparent;
+//     transition: border-color 0.3s ease-in-out;
+//     border-radius: 190px;
+//     .back {
+//       position: relative;
+//       top: -10px;
+// 			left: -15px;
+// 			border: 15px solid transparent;
+// 			transition: border 2s;
+//       // background-color: #fff;
+//       // width: 120px;
+//       height: 120px;
+//       border-radius: 190px;
+//     }
+// 		.back:active{
+// 			border: 15px solid #fff;
+// 			border-right-color: transparent;
+// 		}
+//     .active {
+//       border-color: #fff;
+//     }
+
+//     .readerCardIcon {
+//       position: absolute;
+//       top: 50%;
+//       left: 50%;
+//       transform: translate(-50%, -50%);
+//     }
+//   }
+// }

@@ -1,0 +1,320 @@
+.strengthsBoard {
+	margin-top: 155px;
+	padding-top: 25px;
+  position: sticky;
+  top: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  background-color: $c-white;
+	@media (max-width: 1600px) {
+		padding-top: 20px;
+	}
+  .strengthsBoardContent {
+    display: block;
+
+    .title {
+      max-width: 560px;
+      padding: 30px 0;
+      font-size: 54px;
+      font-weight: 400;
+      line-height: 104.8%; /* 56.592px */
+      letter-spacing: -0.81px;
+			color: #CBCBCB;
+			b {
+				// color: #000;
+			}
+    }
+
+    .strengthsList {
+      display: flex;
+      flex-direction: column;
+      gap: 16px 0;
+      padding: 104px 0 60px;
+
+      .strengthsListItem {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+		
+        gap: 0 16px;
+
+        .strengthsListItemMarker {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 22px;
+          height: 22px;
+          background-color: #F4F4F4;
+          border-radius: 50%;
+        }
+
+        .strengthsListItemTitle {
+          color: #545454;
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 120%; /* 24px */
+					max-width: 451px;
+					width: 100%;
+        }
+      }
+    }
+  }
+
+  .strengthsBoardDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 632px;
+    height: 668px;
+    flex-shrink: 0;
+    border-radius: 23px;
+    background: #F3FCF1;
+    overflow: hidden;
+
+    .iconsContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 50%;
+    }
+
+    .textContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 50%;
+      gap: 24px 0;
+      padding: 25px;
+
+      .title {
+        max-width: 395px;
+        color: $c-black-primary;
+        text-align: center;
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 104.8%; /* 33.536px */
+        letter-spacing: -0.48px;
+      }
+
+      .description {
+        max-width: 451px;
+        color: $c-black-primary;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 140%; /* 25.2px */
+        letter-spacing: -0.54px;
+        opacity: 0.4;
+      }
+    }
+  }
+}
+.strengthsBoard:first-child{
+	margin-top: 0;
+}
+
+@media screen and (max-width: $s-desktop) {
+  .strengthsBoard {
+    .strengthsBoardContent {
+      .title {
+        max-width: get-d(560px);
+        font-size: get-d(54px);
+      }
+
+      .strengthsList {
+        padding: get-d(104px) 0 get-d(60px);
+
+        .strengthsListItem {
+          .strengthsListItemTitle {
+            font-size: get-d(20px);
+          }
+        }
+      }
+    }
+
+    .strengthsBoardDetails {
+      width: get-d(632px);
+      height: get-d(668px);
+
+      .textContainer {
+        .title {
+          max-width: get-d(395px);
+          font-size: get-d(32px);
+        }
+
+        .description {
+          max-width: get-d(451px);
+          font-size: get-d(18px);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $s-laptop) {
+  .strengthsBoard {
+    .strengthsBoardContent {
+      .title {
+        max-width: get-ds(560px);
+        font-size: get-ds(54px);
+      }
+
+      .strengthsList {
+        gap: get-ds(16px) 0;
+        padding: get-ds(104px) 0 get-ds(60px);
+
+        .strengthsListItem {
+          .strengthsListItemTitle {
+            font-size: get-ds(20px);
+          }
+        }
+      }
+    }
+
+    .strengthsBoardDetails {
+      width: get-ds(632px);
+      height: get-ds(668px);
+
+      .textContainer {
+        .title {
+          max-width: get-ds(395px);
+          font-size: get-ds(32px);
+        }
+
+        .description {
+          max-width: get-ds(451px);
+          font-size: get-ds(18px);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $s-tablet) {
+  .strengthsBoard {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px 0;
+
+    .strengthsBoardContent {
+      padding-bottom: 20px;
+
+      .title {
+        max-width: 632px;
+        padding-top: 20px;
+        font-size: get-tl(54px);
+      }
+
+      .strengthsList {
+        gap: 16px 0;
+        padding: 0 0 50px;
+
+        .strengthsListItem {
+          .strengthsListItemTitle {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+
+    .strengthsBoardDetails {
+      width: 632px;
+      height: 668px;
+      order: -1;
+
+      .textContainer {
+        .title {
+          max-width: 395px;
+          font-size: 32px;
+        }
+
+        .description {
+          max-width: 451px;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 698px) {
+  .strengthsBoard {
+    .strengthsBoardContent {
+      .strengthsList {
+        gap: get-t(16px) 0;
+
+        .strengthsListItem {
+          .strengthsListItemTitle {
+            font-size: get-t(20px);
+          }
+        }
+      }
+    }
+
+    .strengthsBoardDetails {
+      width: 100%;
+      max-width: 632px;
+      height: get-t(668px);
+
+      .textContainer {
+        .title {
+          font-size: get-t(32px);
+        }
+
+        .description {
+          font-size: get-t(18px);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $s-mobile) {
+  .strengthsBoard {
+    .strengthsBoardContent { 
+      .title {
+        max-width: 100%;
+        font-size: 29px;
+        letter-spacing: -0.435px;
+      }
+  
+      .strengthsList {
+        gap: 12px 0;
+
+        .strengthsListItem {
+          .strengthsListItemTitle {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  
+    .strengthsBoardDetails {
+      width: 100%;
+      max-width: 632px;
+      min-height: 369px;
+
+      .textContainer {
+        gap: 14px 0;
+
+        .title {
+          max-width: 311px;
+          font-size: 24px;
+          letter-spacing: -0.36px;
+        }
+
+        .description {
+          max-width: 339px;
+          font-size: 14px;
+          letter-spacing: -0.42px;
+        }
+      }
+    }
+  }
+}

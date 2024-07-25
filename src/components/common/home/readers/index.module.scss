@@ -1,0 +1,247 @@
+.fixAnimate {
+  @media (max-width: 1800px) {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+}
+.readersWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 80px 30px;
+
+  .readersContainer {
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 1860px;
+    height: 900px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: no-repeat center url("../../../../public/images/readers-bg.png");
+    background-size: cover;
+
+    .readersTitleContainer {
+      position: absolute;
+      bottom: 475px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      align-items: center;
+      width: 100%;
+      gap: 52px;
+
+      .readersSubtitle {
+        padding: 18px 40px;
+        border: 1px solid $c-white;
+        border-radius: 66px;
+        color: $c-white;
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: -0.5px;
+      }
+
+      .readersTitle {
+        display: flex;
+        align-items: center;
+        min-height: 110px;
+        color: $c-white;
+        text-align: center;
+        text-shadow: 0px 4px 23.6px rgba(0, 0, 0, 0.25);
+        font-size: 110px;
+        font-weight: 400;
+        line-height: 100.8%; /* 110.88px */
+        letter-spacing: -1.65px;
+      }
+    }
+
+    @media screen and (max-width: $s-desktop) {
+      .readersTitleContainer {
+        gap: get-d(52px);
+
+        .readersSubtitle {
+          padding: get-d(18px) get-d(40px);
+          font-size: get-d(20px);
+        }
+
+        .readersTitle {
+          font-size: get-d(110px);
+        }
+      }
+    }
+
+    @media screen and (max-width: $s-laptop) {
+      .readersTitleContainer {
+        gap: get-ds(52px);
+
+        .readersSubtitle {
+          padding: 14px 30px;
+          font-size: 18px;
+        }
+
+        .readersTitle {
+          font-size: get-ds(110px);
+        }
+      }
+    }
+
+    @media screen and (max-width: $s-tablet) {
+      .readersTitleContainer {
+        gap: get-tl(5px);
+      }
+    }
+
+    @media screen and (max-width: $s-mobile) {
+      .readersTitleContainer {
+        bottom: 388px;
+        gap: 100px;
+
+        .readersSubtitle {
+          padding: 8px 20px;
+          font-size: 14px;
+        }
+
+        .readersTitle {
+          font-size: 39px;
+        }
+      }
+    }
+
+    .readersSliderContainer {
+      position: absolute;
+      bottom: 110px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      max-width: max-content;
+
+      .readersSlider {
+        width: 537px;
+        height: 391px;
+        padding: 0 10px;
+      }
+
+      .navButton {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: $c-white;
+        font-size: 20px;
+
+        .secondArrow {
+          position: absolute;
+        }
+      }
+
+      .prev {
+        left: -50px;
+
+        .firstArrow,
+        .secondArrow {
+          transform: rotate(180deg);
+        }
+
+        .secondArrow {
+          right: 10px;
+        }
+      }
+
+      .next {
+        right: -50px;
+
+        .secondArrow {
+          left: 10px;
+        }
+      }
+
+      .disable {
+        pointer-events: none;
+
+        .secondArrow {
+          opacity: 0;
+        }
+      }
+
+      .sliderPagination {
+        position: absolute;
+        bottom: -30px;
+        right: 50%;
+        transform: translate(50%, 100%);
+        display: flex;
+        flex-direction: row;
+        gap: 6px;
+        z-index: 10;
+
+        :global(.swiper-pagination-bullet) {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: $c-white;
+          opacity: 0.2;
+          cursor: pointer;
+        }
+
+        :global(.swiper-pagination-bullet-active) {
+          opacity: 1;
+        }
+      }
+    }
+
+    @media screen and (max-width: $s-mobile) {
+      .readersSliderContainer {
+        bottom: 40px;
+
+        .readersSlider {
+          padding: 0 20px;
+        }
+
+        .navButton {
+          display: none;
+        }
+
+        .sliderPagination {
+          bottom: 38px;
+          right: 20px;
+          transform: translate(-50%, 100%);
+
+          :global(.swiper-pagination-bullet) {
+            width: 8px;
+            height: 8px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $s-tablet) {
+  .readersWrapper {
+    padding: 80px 0;
+
+    .readersContainer {
+      height: get-tl(900px);
+      min-height: 692px;
+      border-radius: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .readersWrapper {
+    .readersContainer {
+      // background: no-repeat center url("../../../../public/images/readers-bg-mobile.png");
+      // background-size: cover;
+
+      .readersSliderContainer {
+        .readersSlider {
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+}

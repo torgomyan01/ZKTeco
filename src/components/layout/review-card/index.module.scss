@@ -1,0 +1,113 @@
+.reviewCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  flex-shrink: 0;
+  width: 400px;
+  height: 476px;
+  padding: 35px;
+  border: 1px solid #EAEAEA;
+  background-color: $c-white;
+	transition: box-shadow 0.3s;
+  .companyLogoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 68px;
+    padding: 0 20px;
+    border-radius: 7px;
+    background-color: #F7F7F7;
+
+    .companyLogo {
+      width: auto;
+      max-height: 100%;
+    }
+  }
+
+  .contentContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 50px 0;
+
+    .reviewText {
+      width: 100%;
+      max-height: 200px;
+      overflow-y: auto;
+
+      &::-webkit-scrollbar {
+        width: 4px;
+      }
+    
+      &::-webkit-scrollbar-track {
+        background: $c-light-grey;
+      }
+    
+      &::-webkit-scrollbar-thumb {
+        background-color: $c-dark-green;
+        border-radius: 10px;
+        border: 0px dotted $c-white;
+      }
+    }
+
+    .customerContainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      align-items: center;
+      width: 100%;
+      gap: 0 16px;
+
+      .customerPhoto {
+        width: 48px;
+        height: 48px;
+      }
+
+      .customerInfoBlock {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 6px 0;
+
+        .customerName {
+          color: $c-black-primary;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 120%; /* 19.2px */
+        }
+
+        .customerPosition {
+          color: #545454;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 120%; /* 16.8px */
+        }
+      }
+    }
+  }
+}
+.reviewCard:hover {
+	box-shadow: 0px 0px 30px #ccffcb;
+}
+@media screen and (max-width: $s-tablet) {
+  .reviewCard {
+    width: 357px;
+    height: 392px;
+    padding: 24px;
+
+    .companyLogoContainer {
+      height: 52px;
+      padding: 0 12px;
+    }
+
+    .contentContainer {
+      .reviewText {
+        max-height: 160px;
+      }
+    }
+  }
+}
